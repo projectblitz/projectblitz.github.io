@@ -1,5 +1,5 @@
 body {
-    background-image: url("https://raw.githubusercontent.com/projectblitz/projectblitz.github.io/master/static/drak_drakon.png");
+    background-image: url(https://raw.githubusercontent.com/projectblitz/projectblitz.github.io/master/static/drak_drakon.png);
     background-size: cover;
     color: yellow;
 }
