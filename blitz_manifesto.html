@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v3.0.0/dist/mini-default.min.css">
+    <link href="static/blitz.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" type="image/png" href="static/theblitz.png" />
+    <title>Project Blitz</title>
+  </head>
+  <body class="container">
+    <div>
+      <h1 style="font-size:6em;text-align:center;">⚡</h1>
+      <h3 style="text-align:center;">The Blitz Manifesto</h3>
+      <h3 style="text-align:center;">by Drak(on)</h3>
+<center>
+  <a href="https://www.projectblitz.org">back</a>
+</center>
+<pre>
+## Context
+
+Official Classic is announced and will be released some day.
+There are plenty of 1x Vanilla servers with corrupt staff looking for the next quick cash grab.
+Servers are volatile, thus 1x rates are inappropriate for adults looking for Vanilla endgame.
+
+Project Blitz was initiated on Friday the 13th of July 2018, after "NeoFeenix" failed.
+One day later a test server was set up and made available to the community.
+
+Project Blitz is intended to end (latest), when official Classic (beta) servers can be played.
+When the project ends, a database dump without account names/password hashes might be published.
+
+
+## Project Blitz key values
+
+* Transparent processes, automation and community involvement
+* Attainable Vanilla experience for people playing less than full-time
+* Play-worthy server, not targetting the 1x "full bli*zlike" 10000 player crowd
+* PvP is no afterthought
+* PvE scripting does not need to be perfect, but playable
+
+
+## The hardware, money, staff and the admin
+
+* The server has good hardware and should be able to handle at least 1000 concurrent players
+* The server is located in Warsaw and advertised as "DDoS protection included", will see how this holds
+
+* Current operational cost: 65.99 Euro per month, handled by my private funds
+* There will not be a donation/cash shop ever
+
+* All work is done by volunteers without compensation, passionate players of Vanilla
+
+* I am a professional software engineer and will remain the only admin with access to the infrastructure
+* Since I am kind of a bottleneck, I will give updates on my availability in Discord
+* My current default availability schedule:
+
+  - Mon: 20:00 - 24:00 +/- 1h
+  - Tue: 22:00 - 24:00 +/- 1h
+  - Wed: 20:00 - 24:00 +/- 1h
+  - Thu: 22:00 - 24:00 +/- 1h
+  - Fri: 23:00 - 24:00 + 1 or 2h
+  - Weekend: generally availabile
+  - Exeptions might happen due to girlfriend and other social obligations
+
+
+## Roadmap
+
+The server is currently in the first testing phase and paid for until 13th of August.
+I intend to have another test phase close to launch, testing the launch state of the server.
+All accounts and characters will be wiped between test phases.
+
+Critical things to be done before launch:
+
+* Security hardening of the server infrastructure (I currently have two issues on the radar)
+* Fix/work-around all already identified causes of server crashes
+* Broadcast all serious GM command usage in a dedicated Discord channel, free for everyone to review
+* Publish server status in regular intervals to Discord: up/down state, number of players online, CPU/memory load
+* Scheduled database backup once per day, pushed elsewhere
+* Terms, rules and privacy statement are formulated
+* Launch GM team and launch marketing strategy are identified
+
+Desired state of the game server before launch:
+
+* Fix spell scaling, mid-air reflectors, broken core class spells
+* All launch PvE content content should be playable without regular manual GM interaction
+
+! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !
+! If the set goals are not realisticly attainable during the first month of development, before launch or !
+! closely after, the project might be canceled and losses cut early.                                      !
+! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !
+
+
+## Technical server foundation
+
+The current test server is based on stock mangoszero, a good foundation for further development.
+The evaluation of the Elysium server would also be an option. But I think it is a bad foundation,
+because it is a code snapshot, poorly documented and only developed further in scattered, private projects.
+Custom changes to the game server/database will be released to the public.
+All server related changes can be developed publicly, no need for a "trust hierarchy" for server development.
+Infrastructure code and scripts (e.g. account creator, server management tools) will remain private.
+
+
+## Server mechanics proposals
+
+Set of orthogonal ideas, that can be combined to a launch server concept. Open for discussion.
+
+1.a High-rate XP, 12x - 24x XP, 2x prof gain, max. weapon skills at levelup, no class training costs
+  + Low development effort
+  - Might not be attractive enough on a potentially low population server
+
+1.b Instant 60
+  + Easy start
+  - Easy for exploiters, hackers, too
+  - Additional custom development effort for starter gear NPCs
+
+1.c Like 1.a but big loot/gold packages at the end of leveling dungeons (suggested by Vee)
+  + Makes clearing dungeons more valuable during high-rate leveling
+  + Might attract some of the 1x crowd looking for leveling dungeon experience
+  - Additional custom development effort for the loot packages
+
+1.d No or lower honor decay
+  + More people having access to highly competive gear, esp. on low-pop
+  - R14 will be less exclusive
+
+  If no decay is combined with 2. (Seasons), the 2% most active PvPers will reach r14 (again)
+  after 2 weeks, if they were at least r10 before, the ~14% most active PvPers will reach r14
+  (again, if r10 before) after maximum 3 weeks and the ~29% most active PvPers will reach r14
+  (again, if r10 before) after maximum 4 weeks.
+
+1.e BG marks can be vendored for gold
+
+1.f Reduced mount/training costs
+
+
+2. Seasons
+  * 2 - 6 months long, after that certain items and ranks get removed/reset,
+    20% gold cut, 20% (min 1) cut of all stackable items
+  * Hall-of-fame for r13+ (first and all attainees), raid endboss kills (first and all guilds)
+  * Hall-of-fame could be hosted beyond the lifetime of the project on GitHub
+  + More balanced/diverse PvP experience
+  + Gold and consumable cut naturally helps against exploiters, botters, gold sellers
+  + Relatively easy to implement
+  - If poorly communicated, might piss off alot people wondering where their stuff went
+
+  Concrete proposal on the gear cut per season:
+  * Remove all Chrom+ items, except T2 set items, making T2 sets a PvE savepoint
+  * All rankers above r10 will be reset to r10
+  * If they reached r12 or higher, their highest rank will remain r12, making r12 the PvP safepoint
+  * 20man, rep items or legendaries will never be cut
+
+
+3.a Release content in stages
+  1. Release: all 60 dungeons, BGs and items at 1.12 state, MC, Ony
+  2. BWL, ZG
+  3. AQ20, AQ40
+  4. Naxx
+
+3.b Release all content at launch, gear check bosses as natural progress blockers
+
+
+4.a Ban multiboxing, no player should be online with more than 2 accounts (main + bank) at once
+
+4.b Allow multiboxing in PvE (max. 5/20/40 parallel accounts?)
+</pre>
+<center>
+  <a href="https://www.projectblitz.org">back</a>
+</center>
+    </div>
+  </body>
+</html>
